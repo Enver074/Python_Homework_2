@@ -19,10 +19,27 @@
 
 # print(int(sum))
 
-a = input("Введите число: ")
-sum = 0 
-for i in a:
-    if i.isdigit():
-        sum += int(i)
+# a = input("Введите число: ")
+# sum = 0 
+# for i in a:
+#     if i.isdigit():
+#         sum += int(i)
 
-print(sum)
+# print(sum)
+
+# Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
+
+# Пример:
+
+# - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
+
+N = int(input("Введите число N: "))
+
+i = 1
+mult = 1
+print("(", end="")
+while i <= (N-1):
+    mult *= i
+    i += 1
+    print( f'{mult}, ', end = " ")
+print( f'{mult*N}) ', end = " ")
