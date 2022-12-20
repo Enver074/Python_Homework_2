@@ -63,12 +63,21 @@
 # Задайте список из N элементов, заполненных числами из промежутка [-N, N]. Найдите произведение элементов на указанных позициях. Позиции хранятся в файле file.txt в одной строке одно число.
 
 
-N = int(input('Введите число N: '))
-a = list(range(-N, N+1))
-print(a)
-data = open('file.txt', 'r')
-position = list(map(int,data.readlines()))
-mult = 1
-for i in range(len(position)):
-    mult *= [i for i in range(-N, N+1)][position[i]]
-print(mult)
+# N = int(input('Введите число N: '))
+# a = list(range(-N, N+1))
+# print(a)
+# data = open('file.txt', 'r')
+# position = list(map(int,data.readlines()))
+# mult = 1
+# for i in range(len(position)):
+#     mult *= [i for i in range(-N, N+1)][position[i]]
+# print(mult)
+
+
+# Реализуйте алгоритм перемешивания списка.
+
+import random
+spisok = [random.randrange(10) for i in range(random.randrange(20))]
+print(spisok)
+random.shuffle(spisok)
+print(f"список после перемешивания:\n{spisok}")
