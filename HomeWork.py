@@ -51,7 +51,10 @@
 # - Для n=4 {1: 2, 2: 2.25, 3: 2.37, 4: 2.44}
 
 n = int(input("Введите число N: "))
-a = {}
+num = {}
+sum = 0
 for i in range(1, n+1):
-    a[i]=round((1+(1/i))**i, 2)
-print(a)
+    num[i]=round((1+(1/i))**i, 2)
+    sum += num[i]
+print(num)
+print(sum)
